@@ -1,5 +1,5 @@
 {
-  "name": "create-react-app",
+  "name": "terra-payment-pages",
   "version": "1.0.0",
   "main": "src/index.tsx",
   "scripts": {

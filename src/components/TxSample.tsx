@@ -12,9 +12,14 @@ import { useCallback, useState, useMemo } from 'react';
 import { useSelectedChain } from './ChainSelector';
 import { getRandomAddress, ConnectedWalletNetworkInfo } from 'utils';
 
+import { Button, Text, grommet } from "grommet";
+import { Moon, Sun } from "grommet-icons";
+
 export function TxSample() {
   const [txResult, setTxResult] = useState<TxResult | null>(null);
   const [txError, setTxError] = useState<string | null>(null);
+  const [dark, setDark] = useState<boolean | false>(false);
+
   const chainID = useSelectedChain();
   const connectedWallet = useConnectedWallet();
   const network = connectedWallet?.network[chainID] as ConnectedWalletNetworkInfo
@@ -82,11 +87,9 @@ export function TxSample() {
 
   return (
     <div>
+      {connectedWallet?.availablePost && toAddress && !txResult && !txError && ( <button onClick={proceed}>Send 1{baseAsset} to {toAddress}</button> )}
+      <Button a11yTitle={dark ? "Switch to Light Mode" : "Switch to Dark Mode"} icon={dark ? <Moon /> : <Sun />} onClick={() => setDark(!dark)} />
       <h1>Tx Sample</h1>
-      {connectedWallet?.availablePost && toAddress && !txResult && !txError && (
-        <button onClick={proceed}>Send 1{baseAsset} to {toAddress}</button>
-      )}
-
       {txResult && (
         <>
           <pre>{JSON.stringify(txResult, null, 2)}</pre>
