@@ -28,7 +28,7 @@ const TEST_NETWORK = {
     "coinType": "330",
     "baseAsset": "umars",
     "name": "Mars",
-    "icon": "https://station-assets.terra.money/img/chains/Mars.svg",
+    "icon": "https://station-assets.terra.dev/img/chains/Mars.svg",
     "ibc": {
       "toTerra": "channel-0",
       "fromTerra": "channel-189"
