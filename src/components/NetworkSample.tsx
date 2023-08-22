@@ -20,19 +20,42 @@ export function NetworkSample() {
 
 const TEST_NETWORK = { 
   "ares-1": {
-    "chainID": "ares-1",
-    "lcd": "https://testnet-rest.marsprotocol.io",
-    "gasAdjustment": 2,
-    "gasPrices": { "umars": 0 },
-    "prefix": "mars",
-    "coinType": "330",
-    "baseAsset": "umars",
-    "name": "Mars",
-    "icon": "https://station-assets.terra.dev/img/chains/Mars.svg",
-    "ibc": {
-      "toTerra": "channel-0",
-      "fromTerra": "channel-189"
+    "chainID": "rebel-2",
+    "gasAdjustment": 5,
+    "gasPrices": {
+      "uaud": 0.95,
+      "ucad": 0.95,
+      "uchf": 0.7,
+      "ucny": 4.9,
+      "udkk": 4.5,
+      "ueur": 0.625,
+      "ugbp": 0.55,
+      "uhkd": 5.85,
+      "uidr": 10900,
+      "uinr": 54.4,
+      "ujpy": 81.85,
+      "ukrw": 850,
+      "uluna": 28.325,
+      "umnt": 2142.855,
+      "umyr": 3,
+      "unok": 6.25,
+      "uphp": 38,
+      "usdr": 0.52469,
+      "usek": 6.25,
+      "usgd": 1,
+      "uthb": 23.1,
+      "utwd": 20,
+      "uusd": 0.75
     },
+    "icon": "https://station-assets.terraclassic.community/img/chains/Terra.svg",
+    "isClassic": true,
+    "lcd": "https://lcd.hexxagon.dev",
+    "name": "Terra Classic",
+    "prefix": "terra"
+    // "ibc": {
+    //   "toTerra": "channel-0",
+    //   "fromTerra": "channel-189"
+    // },
   }
 }
 function Component() {

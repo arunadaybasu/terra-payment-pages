@@ -11,8 +11,10 @@ export function QuerySample() {
 
   useEffect(() => {
     if (connectedWallet) {
-      lcd.bank.balance(connectedWallet.addresses[chainID]).then(([coins]) => {
-        setBank(coins.toString());
+      console.log(connectedWallet.addresses['rebel-2']);
+      lcd.bank.balance(connectedWallet.addresses['rebel-2']).then((result) => {
+        console.log(JSON.stringify(result));
+        // setBank(coins.toString());
       });
     } else {
       setBank(null);
